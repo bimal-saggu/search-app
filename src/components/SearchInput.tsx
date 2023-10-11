@@ -8,6 +8,7 @@ const SearchInput = () => {
         variant="outline"
         borderRadius={12}
         size="lg"
+        bg="white"
         placeholder="Search"
         borderColor="white"
         focusBorderColor="white"
