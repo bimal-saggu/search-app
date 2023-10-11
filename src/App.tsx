@@ -1,26 +1,24 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Box, Center, Image } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
+import SearchInput from "./components/SearchInput";
+import home from "./assets/home.jpg";
 
 function App() {
   return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`,
-      }}
-    >
-      <GridItem area="nav">
+    <Box>
+      <Image src={home} alt="Background Image" />
+      <Center position="absolute" top="1%" right="1%">
         <NavBar />
-      </GridItem>
-      <Show above="lg">
-        <GridItem area="aside" bg="gold">
-          ASIDE
-        </GridItem>
-      </Show>
-      <GridItem area="main" bg="dodgerblue">
-        MAIN
-      </GridItem>
-    </Grid>
+      </Center>
+      <Center
+        position="absolute"
+        top="20%"
+        left="50%"
+        transform="translate(-50%, -50%)"
+      >
+        <SearchInput />
+      </Center>
+    </Box>
   );
 }
 
